@@ -1,0 +1,261 @@
+/* --- PHẦN 1: RESET & CHUNG --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt khi bấm menu */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h3 {
+    font-size: 24pt;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.underline {
+    width: 50px;
+    height: 3px;
+    background: #c0a080;
+    margin: 15px auto 0;
+}
+
+.light-bg {
+    background: #f9f9f9;
+}
+
+/* --- PHẦN 2: HEADER & NAVIGATION --- */
+header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 20pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-weight: 300;
+    color: #888;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 9pt;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c0a080;
+}
+
+/* --- PHẦN 3: CÁC SECTION CHI TIẾT --- */
+
+/* Hero */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 40pt;
+    margin-bottom: 10px;
+}
+
+/* About */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-text, .about-img {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 26pt;
+    margin-bottom: 20px;
+}
+
+/* Products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-item {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-item:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+
+.img-placeholder {
+    background: #f4f4f4;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.9rem;
+    border: 1px solid #f0f0f0;
+}
+
+.price {
+    color: #c0a080;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Projects */
+.project-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.project-card {
+    background: #fff;
+}
+
+.project-info {
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+/* Contact */
+.contact-flex {
+    display: flex;gap: 50px;
+}
+
+.contact-form {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #eee;
+    background: #fdfdfd;
+    font-family: inherit;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.map-placeholder {
+    height: 250px;
+    background: #eee;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 9pt;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #c0a080;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #777;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- PHẦN 4: RESPONSIVE --- */
+@media (max-width: 992px) {
+    .about-flex, .contact-flex {
+        flex-direction: column;
+    }
+    
+    .hero-content h2 {
+        font-size: 28pt;
+    }
+    
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+}
